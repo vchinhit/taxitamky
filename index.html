@@ -219,54 +219,53 @@
 </div>
 
 <script>
-function sendTelegram(e) {
+// TELEGRAM BOT (TỰ ĐỘNG)
+function sendTelegram(e){
   e.preventDefault();
 
-  const pickup = document.getElementById("pickup")?.value || "";
-  const dropoff = document.getElementById("dropoff")?.value || "";
-  const phone = document.getElementById("phone")?.value || "";
-  const car = document.getElementById("car")?.value || "";
+  const pickupVal  = document.getElementById('pickup').value;
+  const dropoffVal = document.getElementById('dropoff').value;
+  const phoneVal   = document.getElementById('phone').value;
+  const carVal     = document.getElementById('car').value;
 
-  if (!pickup || !dropoff || !phone) {
-    alert("Vui lòng nhập đầy đủ thông tin");
-    return;
-  }
+  const text = `🚕 ĐẶT XE MỚI
+📍 Đón: ${pickupVal}
+🏁 Đến: ${dropoffVal}
+🚗 Xe: ${carVal}
+☎️ ${phoneVal}`;
 
-  const message =
-`🚕 *YÊU CẦU ĐẶT XE*
-📍 Đón: ${pickup}
-🏁 Trả: ${dropoff}
-📞 SĐT: ${phone}
-🚗 Loại xe: ${car || "Chưa chọn"}`;
-
-  fetch("https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUY/sendMessage", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      chat_id: "6024711670",
-      text: message,
-      parse_mode: "Markdown"
+  fetch('https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUY/sendMessage',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      chat_id:'6024711670',
+      text:text
     })
   })
   .then(res => res.json())
   .then(data => {
-    if (data.ok) {
-      alert("✅ Gửi yêu cầu thành công!");
-      document.querySelector("form").reset();
-    } else {
-      alert("❌ Telegram không nhận được");
-      console.log(data);
+    if(data.ok){
+      alert('✅ Đã gửi yêu cầu thành công!');
+    }else{
+      alert('❌ Gửi thất bại: ' + data.description);
     }
   })
   .catch(err => {
-    alert("❌ Lỗi kết nối Telegram");
+    alert('❌ Lỗi kết nối Telegram');
     console.error(err);
   });
 }
+🏁 Đến: ${dropoff}
+🚗 Xe: ${car}
+☎️ ${phone}`;
+
+  fetch('https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUY/sendMessage',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({chat_id:'6024711670',text})
+  }).then(()=>alert('✅ Đã gửi yêu cầu!'));
+}
+
 </script>
-
-
 </body>
 </html>
