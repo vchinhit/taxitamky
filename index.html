@@ -51,12 +51,7 @@
       100%{transform:translateX(0)}
     }
 
-    /* POPUP */
-    .popup{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:3000}
-    .popup-content{background:#fff;padding:20px;border-radius:12px;text-align:center;max-width:320px}
-    .popup-content h3{color:#e53935;margin-top:0}
-    .popup-content button{margin-top:10px;padding:10px 18px;border:none;background:#e53935;color:#fff;border-radius:20px;font-weight:bold}
-
+    
     @media(min-width:768px){.container{max-width:1100px;margin:auto}}
   </style>
 </head>
@@ -227,13 +222,39 @@
 // TELEGRAM BOT (TỰ ĐỘNG)
 function sendTelegram(e){
   e.preventDefault();
-  const pickup = pickup.value;
-  const dropoff = dropoff.value;
-  const phone = phone.value;
-  const car = car.value;
+
+  const pickupVal  = document.getElementById('pickup').value;
+  const dropoffVal = document.getElementById('dropoff').value;
+  const phoneVal   = document.getElementById('phone').value;
+  const carVal     = document.getElementById('car').value;
 
   const text = `🚕 ĐẶT XE MỚI
-📍 Đón: ${pickup}
+📍 Đón: ${pickupVal}
+🏁 Đến: ${dropoffVal}
+🚗 Xe: ${carVal}
+☎️ ${phoneVal}`;
+
+  fetch('https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUY/sendMessage',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      chat_id:'6024711670',
+      text:text
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.ok){
+      alert('✅ Đã gửi yêu cầu thành công!');
+    }else{
+      alert('❌ Gửi thất bại: ' + data.description);
+    }
+  })
+  .catch(err => {
+    alert('❌ Lỗi kết nối Telegram');
+    console.error(err);
+  });
+}
 🏁 Đến: ${dropoff}
 🚗 Xe: ${car}
 ☎️ ${phone}`;
@@ -245,19 +266,6 @@ function sendTelegram(e){
   }).then(()=>alert('✅ Đã gửi yêu cầu!'));
 }
 
-// POPUP KHUYẾN MÃI
-window.onload=function(){
-  setTimeout(()=>{
-    document.body.insertAdjacentHTML('beforeend',`
-      <div class="popup" onclick="this.remove()">
-        <div class="popup-content">
-          <h3>🔥 KHUYẾN MÃI</h3>
-          <p><strong>Tam Kỳ – Đà Nẵng chỉ 100.000đ</strong></p>
-          <button>ĐẶT XE NGAY</button>
-        </div>
-      </div>`)
-  },1500)
-}
 </script>
 </body>
 </html>
