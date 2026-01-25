@@ -208,53 +208,24 @@
   <a class="call-btn shake" href="tel:0369934009">📞 GỌI XE NGAY</a>
   <a class="zalo-btn shake" href="https://zalo.me/0369934009" target="_blank">ZALO</a>
 </div>
-      </div>
-    </a>
-  <a class="zalo-btn" href="https://zalo.me/0369934009" target="_blank" aria-label="Chat Zalo">
-    <svg class="zalo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.02 2 10.97c0 2.8 1.5 5.32 3.94 6.97-.17.63-.6 2.2-.7 2.55 0 0-.02.1.05.14.07.04.15 0 .15 0 .2-.03 2.32-1.52 3.04-2.03 1.01.28 2.08.43 3.2.43 5.52 0 10-4.02 10-8.97S17.52 2 12 2z"/>
-      <text x="12" y="15" text-anchor="middle" font-size="8" fill="#0a8d48" font-weight="bold">Zalo</text>
-    </svg>
-  </a>
-</div>
 
 <script>
-// TELEGRAM BOT (TỰ ĐỘNG)
+// TELEGRAM BOT (TỰ ĐỘNG – CẤU TRÚC CHUẨN)
 function sendTelegram(e){
   e.preventDefault();
 
-  const pickupVal  = document.getElementById('pickup').value;
-  const dropoffVal = document.getElementById('dropoff').value;
-  const phoneVal   = document.getElementById('phone').value;
-  const carVal     = document.getElementById('car').value;
+  const pickup  = document.getElementById('pickup').value.trim();
+  const dropoff = document.getElementById('dropoff').value.trim();
+  const phone   = document.getElementById('phone').value.trim();
+  const car     = document.getElementById('car').value;
+
+  if(!pickup || !dropoff || !phone){
+    alert('❌ Vui lòng nhập đầy đủ thông tin');
+    return;
+  }
 
   const text = `🚕 ĐẶT XE MỚI
-📍 Đón: ${pickupVal}
-🏁 Đến: ${dropoffVal}
-🚗 Xe: ${carVal}
-☎️ ${phoneVal}`;
-
-  fetch('https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUY/sendMessage',{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({
-      chat_id:'6024711670',
-      text:text
-    })
-  })
-  .then(res => res.json())
-  .then(data => {
-    if(data.ok){
-      alert('✅ Đã gửi yêu cầu thành công!');
-    }else{
-      alert('❌ Gửi thất bại: ' + data.description);
-    }
-  })
-  .catch(err => {
-    alert('❌ Lỗi kết nối Telegram');
-    console.error(err);
-  });
-}
+📍 Đón: ${pickup}
 🏁 Đến: ${dropoff}
 🚗 Xe: ${car}
 ☎️ ${phone}`;
@@ -262,10 +233,25 @@ function sendTelegram(e){
   fetch('https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUY/sendMessage',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({chat_id:'6024711670',text})
-  }).then(()=>alert('✅ Đã gửi yêu cầu!'));
+    body:JSON.stringify({
+      chat_id:6024711670,
+      text:text
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.ok){
+      alert('✅ Đã gửi yêu cầu thành công!');
+      document.querySelector('form').reset();
+    }else{
+      alert('❌ Telegram lỗi: ' + data.description);
+    }
+  })
+  .catch(err => {
+    alert('❌ Không kết nối được Telegram');
+    console.error(err);
+  });
 }
-
 </script>
 </body>
 </html>
