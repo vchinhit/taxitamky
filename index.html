@@ -13,144 +13,51 @@
       --bg:#f7f7f7;
     }
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:#fff;
-      color:#222;
-    }
+    body{margin:0;font-family:Arial, Helvetica, sans-serif;background:#fff;color:#222}
     a{text-decoration:none;color:inherit}
-
-    /* MOBILE FIRST */
     .container{padding:0 14px}
-
-    header{
-      position:sticky;top:0;z-index:1000;
-      background:#fff;
-      box-shadow:0 2px 8px rgba(0,0,0,.08);
-    }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      height:56px;
-    }
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .header-inner{display:flex;align-items:center;justify-content:center;height:56px}
     nav{display:none}
     .logo{font-weight:bold;font-size:16px;color:var(--primary)}
-
-    .hero{
-      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-        url('https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?q=80&w=1200&auto=format&fit=crop') center/cover;
-      color:#fff;
-      padding:32px 0 20px;
-    }
+    .hero{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?q=80&w=1200&auto=format&fit=crop') center/cover;color:#fff;padding:32px 0 20px}
     .hero-grid{display:block}
     .hero h1{font-size:22px;margin:0 0 6px;text-align:center}
     .hero p{font-size:14px;opacity:.9;text-align:center;margin-bottom:14px}
-
-    .booking{
-      background:#fff;
-      color:#222;
-      border-radius:12px;
-      padding:16px;
-      box-shadow:0 8px 20px rgba(0,0,0,.2);
-    }
-    .booking h3{margin:0 0 10px;text-align:center;font-size:16px}
-    .booking input,.booking select,.booking button{
-      width:100%;padding:14px;margin-bottom:10px;
-      border-radius:8px;border:1px solid #ddd;font-size:15px
-    }
-    .booking button{background:var(--primary);color:#fff;border:none;font-weight:bold}
-
+    .booking{background:#fff;color:#222;border-radius:12px;padding:16px;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+    .booking h3{text-align:center}
+    .booking input,.booking select,.booking button{width:100%;padding:14px;margin-bottom:10px;border-radius:8px;border:1px solid #ddd;font-size:15px}
+    .booking button{background:var(--primary);color:#fff;border:none;font-weight:bold;animation:pulse 1.8s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(229,57,53,.6)}70%{box-shadow:0 0 0 12px rgba(229,57,53,0)}100%{box-shadow:0 0 0 0 rgba(229,57,53,0)}}
     .price-box{margin-top:20px;background:#fff;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.08);padding:14px}
-    .price-box h4{text-align:center;margin:6px 0 12px;font-size:15px;color:var(--primary)}
+    .price-box h4{text-align:center;color:var(--primary)}
     .price-table{width:100%;border-collapse:collapse;font-size:13px}
     .price-table th,.price-table td{border:1px solid #eee;padding:10px 6px;text-align:center}
-    .price-table th{background:#fafafa;font-weight:bold}
-    .price-note{font-size:12px;color:#777;text-align:center;margin-top:6px}
-
     .features{background:var(--bg);padding:30px 0}
-    .features-grid{display:grid;grid-template-columns:1fr;gap:12px}
-    .feature{background:#fff;padding:14px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.08)}
-    .feature h4{margin:0 0 4px;font-size:15px}
-    .feature p{margin:0;font-size:13px;color:var(--gray)}
-
     footer{background:#111;color:#ccc;padding:18px 0 70px;text-align:center;font-size:13px}
-
-    .bottom-bar{
-      position:fixed;left:0;right:0;bottom:0;
-      display:flex;z-index:2000;font-weight:bold
-    }
-    .bottom-bar a{
-      flex:1;padding:14px 0;text-align:center;color:#fff;font-size:15px
-    }
+    .bottom-bar{position:fixed;left:0;right:0;bottom:0;display:flex;z-index:2000;font-weight:bold}
+    .bottom-bar a{flex:1;padding:14px 0;text-align:center;color:#fff;font-size:15px}
     .call-btn{background:var(--primary)}
-    .call-icon{color:#fff}
     .zalo-btn{background:#0a8d48;display:flex;align-items:center;justify-content:center}
-    .zalo-icon{width:22px;height:22px;fill:#fff}
 
-    /* DESKTOP */
-    @media(min-width:768px){
-      .container{max-width:1100px;margin:auto}
-      .header-inner{justify-content:space-between;height:64px}
-      nav{display:block}
-      .hero{padding:60px 0}
-      .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
-      .hero h1{text-align:left;font-size:36px}
-      .hero p{text-align:left;font-size:18px}
-      .features-grid{grid-template-columns:repeat(4,1fr)}
-      footer{padding-bottom:30px}
-    }
-  
-    /* HIỆU ỨNG SINH ĐỘNG NHẸ */
-    .booking button{
-      animation:pulse 1.8s infinite;
-    }
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(229,57,53,.6)}
-      70%{box-shadow:0 0 0 12px rgba(229,57,53,0)}
-      100%{box-shadow:0 0 0 0 rgba(229,57,53,0)}
+    /* RUNG LẮC 2S - NGHỈ */
+    .shake{animation:shake 2s infinite}
+    @keyframes shake{
+      0%{transform:translateX(0)}
+      10%{transform:translateX(-3px)}
+      20%{transform:translateX(3px)}
+      30%{transform:translateX(-3px)}
+      40%{transform:translateX(3px)}
+      100%{transform:translateX(0)}
     }
 
-    .feature{transition:transform .25s ease, box-shadow .25s ease}
-    .feature:hover{
-      transform:translateY(-4px);
-      box-shadow:0 10px 20px rgba(0,0,0,.12)
-    }
+    /* POPUP */
+    .popup{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:3000}
+    .popup-content{background:#fff;padding:20px;border-radius:12px;text-align:center;max-width:320px}
+    .popup-content h3{color:#e53935;margin-top:0}
+    .popup-content button{margin-top:10px;padding:10px 18px;border:none;background:#e53935;color:#fff;border-radius:20px;font-weight:bold}
 
-    .price-box{transition:transform .25s ease}
-    .price-box:hover{transform:scale(1.01)}
-
-    .bottom-bar a{
-      position:relative;
-      overflow:hidden;
-    }
-    .bottom-bar a::after{
-      content:"";
-      position:absolute;top:0;left:-100%;
-      width:100%;height:100%;
-      background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);
-      animation:shine 3s infinite;
-    }
-    @keyframes shine{
-      0%{left:-100%}
-      50%{left:100%}
-      100%{left:100%}
-    }
-
-    /* PHÓNG TO - THU NHỎ NHẸ (XE GHÉP) */
-    .zoom-pulse{
-      animation:zoomPulse 1.6s ease-in-out infinite;
-    }
-    @keyframes zoomPulse{
-      0%{transform:scale(1)}
-      50%{transform:scale(1.06)}
-      100%{transform:scale(1)}
-    }
-      50%{left:100%}
-      100%{left:100%}
-    }
-
+    @media(min-width:768px){.container{max-width:1100px;margin:auto}}
   </style>
 </head>
 <body>
@@ -303,10 +210,9 @@
 </footer>
 
 <div class="bottom-bar">
-  <a class="call-btn" href="tel:0369934009">
-      <div style="line-height:1.1">
-        <div>📞 GỌI XE</div>
-        <div style="font-size:12px;opacity:.9">0369 934 009</div>
+  <a class="call-btn shake" href="tel:0369934009">📞 GỌI XE NGAY</a>
+  <a class="zalo-btn shake" href="https://zalo.me/0369934009" target="_blank">ZALO</a>
+</div>
       </div>
     </a>
   <a class="zalo-btn" href="https://zalo.me/0369934009" target="_blank" aria-label="Chat Zalo">
@@ -318,23 +224,40 @@
 </div>
 
 <script>
-  function sendTelegram(e){
-    e.preventDefault();
-    const pickup = document.getElementById('pickup').value;
-    const dropoff = document.getElementById('dropoff').value;
-    const phone = document.getElementById('phone').value;
-    const car = document.getElementById('car').value;
+// TELEGRAM BOT (TỰ ĐỘNG)
+function sendTelegram(e){
+  e.preventDefault();
+  const pickup = pickup.value;
+  const dropoff = dropoff.value;
+  const phone = phone.value;
+  const car = car.value;
 
-    const msg = `🚕 YÊU CẦU ĐẶT XE
-📍 Điểm đón: ${pickup}
-🏁 Điểm đến: ${dropoff}
-🚗 Loại xe: ${car}
-☎️ SĐT: ${phone}`;
+  const text = `🚕 ĐẶT XE MỚI
+📍 Đón: ${pickup}
+🏁 Đến: ${dropoff}
+🚗 Xe: ${car}
+☎️ ${phone}`;
 
-    const telegramUser = 'TaxiTamKy'; // 👉 đổi thành username Telegram của bạn
-    const telegramUrl = `https://t.me/${telegramUser}?text=${encodeURIComponent(msg)}`;
-    window.open(telegramUrl, '_blank');
-  }
+  fetch('https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUYo/sendMessage',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({chat_id:'459590927',text})
+  }).then(()=>alert('✅ Đã gửi yêu cầu!'));
+}
+
+// POPUP KHUYẾN MÃI
+window.onload=function(){
+  setTimeout(()=>{
+    document.body.insertAdjacentHTML('beforeend',`
+      <div class="popup" onclick="this.remove()">
+        <div class="popup-content">
+          <h3>🔥 KHUYẾN MÃI</h3>
+          <p><strong>Tam Kỳ – Đà Nẵng chỉ 100.000đ</strong></p>
+          <button>ĐẶT XE NGAY</button>
+        </div>
+      </div>`)
+  },1500)
+}
 </script>
 </body>
 </html>
