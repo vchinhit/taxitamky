@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặt Xe Taxi Nhanh | Taxi Tam Kỳ</title>
+  <meta name="description" content="Dịch vụ taxi uy tín – đặt xe nhanh – giá rõ ràng – phục vụ 24/7" />
+  <style>
+    :root{
+      --primary:#e53935;
+      --dark:#222;
+      --gray:#666;
+      --bg:#f7f7f7;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#fff;
+      color:#222;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* MOBILE FIRST */
+    .container{padding:0 14px}
+
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:#fff;
+      box-shadow:0 2px 8px rgba(0,0,0,.08);
+    }
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:56px;
+    }
+    nav{display:none}
+    .logo{font-weight:bold;font-size:16px;color:var(--primary)}
+
+    .hero{
+      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+        url('https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?q=80&w=1200&auto=format&fit=crop') center/cover;
+      color:#fff;
+      padding:32px 0 20px;
+    }
+    .hero-grid{display:block}
+    .hero h1{font-size:22px;margin:0 0 6px;text-align:center}
+    .hero p{font-size:14px;opacity:.9;text-align:center;margin-bottom:14px}
+
+    .booking{
+      background:#fff;
+      color:#222;
+      border-radius:12px;
+      padding:16px;
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
+    }
+    .booking h3{margin:0 0 10px;text-align:center;font-size:16px}
+    .booking input,.booking select,.booking button{
+      width:100%;padding:14px;margin-bottom:10px;
+      border-radius:8px;border:1px solid #ddd;font-size:15px
+    }
+    .booking button{background:var(--primary);color:#fff;border:none;font-weight:bold}
+
+    .price-box{margin-top:20px;background:#fff;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.08);padding:14px}
+    .price-box h4{text-align:center;margin:6px 0 12px;font-size:15px;color:var(--primary)}
+    .price-table{width:100%;border-collapse:collapse;font-size:13px}
+    .price-table th,.price-table td{border:1px solid #eee;padding:10px 6px;text-align:center}
+    .price-table th{background:#fafafa;font-weight:bold}
+    .price-note{font-size:12px;color:#777;text-align:center;margin-top:6px}
+
+    .features{background:var(--bg);padding:30px 0}
+    .features-grid{display:grid;grid-template-columns:1fr;gap:12px}
+    .feature{background:#fff;padding:14px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.08)}
+    .feature h4{margin:0 0 4px;font-size:15px}
+    .feature p{margin:0;font-size:13px;color:var(--gray)}
+
+    footer{background:#111;color:#ccc;padding:18px 0 70px;text-align:center;font-size:13px}
+
+    .bottom-bar{
+      position:fixed;left:0;right:0;bottom:0;
+      display:flex;z-index:2000;font-weight:bold
+    }
+    .bottom-bar a{
+      flex:1;padding:14px 0;text-align:center;color:#fff;font-size:15px
+    }
+    .call-btn{background:var(--primary)}
+    .call-icon{color:#fff}
+    .zalo-btn{background:#0a8d48;display:flex;align-items:center;justify-content:center}
+    .zalo-icon{width:22px;height:22px;fill:#fff}
+
+    /* DESKTOP */
+    @media(min-width:768px){
+      .container{max-width:1100px;margin:auto}
+      .header-inner{justify-content:space-between;height:64px}
+      nav{display:block}
+      .hero{padding:60px 0}
+      .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+      .hero h1{text-align:left;font-size:36px}
+      .hero p{text-align:left;font-size:18px}
+      .features-grid{grid-template-columns:repeat(4,1fr)}
+      footer{padding-bottom:30px}
+    }
+  
+    /* HIỆU ỨNG SINH ĐỘNG NHẸ */
+    .booking button{
+      animation:pulse 1.8s infinite;
+    }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(229,57,53,.6)}
+      70%{box-shadow:0 0 0 12px rgba(229,57,53,0)}
+      100%{box-shadow:0 0 0 0 rgba(229,57,53,0)}
+    }
+
+    .feature{transition:transform .25s ease, box-shadow .25s ease}
+    .feature:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 20px rgba(0,0,0,.12)
+    }
+
+    .price-box{transition:transform .25s ease}
+    .price-box:hover{transform:scale(1.01)}
+
+    .bottom-bar a{
+      position:relative;
+      overflow:hidden;
+    }
+    .bottom-bar a::after{
+      content:"";
+      position:absolute;top:0;left:-100%;
+      width:100%;height:100%;
+      background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);
+      animation:shine 3s infinite;
+    }
+    @keyframes shine{
+      0%{left:-100%}
+      50%{left:100%}
+      100%{left:100%}
+    }
+
+    /* PHÓNG TO - THU NHỎ NHẸ (XE GHÉP) */
+    .zoom-pulse{
+      animation:zoomPulse 1.6s ease-in-out infinite;
+    }
+    @keyframes zoomPulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.06)}
+      100%{transform:scale(1)}
+    }
+      50%{left:100%}
+      100%{left:100%}
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">🚕 TAXI TAM KỲ<br><a href="tel:0369934009" style="font-size:12px;color:#666;font-weight:normal">Hotline: 0369 934 009</a></div>
+    <nav>
+      <a href="#">Trang chủ</a>
+      <a href="#">Bảng giá</a>
+      <a href="#">Dịch vụ</a>
+      <a href="#">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Đặt xe taxi nhanh chóng – An toàn – Giá rõ ràng</h1>
+      <p>Phục vụ 24/7 • Xe đời mới • Lái xe chuyên nghiệp</p>
+    </div>
+    <div class="booking">
+      <h3>ĐẶT XE NGAY</h3>
+      <form onsubmit="sendTelegram(event)">
+        <input type="text" id="pickup" placeholder="Điểm đón" required />
+        <input type="text" id="dropoff" placeholder="Điểm đến" required />
+        <input type="tel" id="phone" placeholder="Số điện thoại" required />
+        <select id="car">
+          <option>Taxi 4 chỗ</option>
+          <option>Taxi 7 chỗ</option>
+        </select>
+        <button type="submit">GỬI YÊU CẦU</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- BẢNG GIÁ RIÊNG -->
+<section class="features">
+  <div class="container">
+
+    <div class="price-box">
+      <h4>BẢNG GIÁ TAXI LIÊN XÃ</h4>
+      <table class="price-table">
+        <tr>
+          <th>Tuyến đường</th>
+          <th>4 chỗ</th>
+          <th>7 chỗ</th>
+        </tr>
+        <tr>
+          <td>Tam Kỳ ⇄ Hà Lam</td>
+          <td>200.000đ</td>
+          <td>280.000đ</td>
+        </tr>
+        <tr>
+          <td>Tam Kỳ ⇄ Nam Phước</td>
+          <td>300.000đ</td>
+          <td>400.000đ</td>
+        </tr>
+        <tr>
+          <td>Tam Kỳ ⇄ Đại Lộc</td>
+          <td>500.000đ</td>
+          <td>650.000đ</td>
+        </tr>
+        <tr>
+          <td>Tam Kỳ ⇄ Chu Lai</td>
+          <td>250.000đ</td>
+          <td>350.000đ</td>
+        </tr>
+        <tr>
+          <td>Tam Kỳ ⇄ Hội An</td>
+          <td>350.000đ</td>
+          <td>450.000đ</td>
+        </tr>
+        <tr>
+          <td>Tam Kỳ ⇄ Đà Nẵng</td>
+          <td>700.000đ</td>
+          <td>900.000đ</td>
+        </tr>
+        <tr>
+          <td>Tam Kỳ ⇄ Huế</td>
+          <td>1.400.000đ</td>
+          <td>1.700.000đ</td>
+        </tr>
+      </table>
+      <p class="price-note">* Giá trọn gói, chưa bao gồm phí cầu đường</p>
+    </div>
+
+    <div class="price-box">
+      <h4>BẢNG GIÁ TAXI SÂN BAY</h4>
+      <table class="price-table">
+        <tr>
+          <th>Tuyến sân bay</th>
+          <th>4 chỗ</th>
+          <th>7 chỗ</th>
+        </tr>
+        <tr>
+          <tr>
+          <td>Tam Kỳ ⇄ Sân bay Chu Lai</td>
+          <td>300.000đ</td>
+          <td>300.000đ</td>
+        </tr>
+        <tr>
+          <tr>
+          <td>Tam Kỳ ⇄ Sân bay Đà Nẵng</td>
+          <td>400.000đ</td>
+          <td>400.000đ</td>
+        </tr>
+      </table>
+      <p class="price-note">* Giá trọn gói đón/trả sân bay, hỗ trợ hành lý</p>
+    </div>
+
+    
+
+    <div class="price-box" style="background:linear-gradient(135deg,#e53935,#ff7043);color:#fff;text-align:center">
+      <h4 style="color:#fff">🚐 XE GHÉP – XE TIỆN CHUYẾN GIÁ TIẾT KIỆM</h4>
+      <p style="font-size:14px;margin:8px 0">Chạy hằng ngày • Giá rẻ hơn taxi riêng • Phù hợp đi sân bay – liên xã</p>
+      <a href="https://zalo.me/0369934009" target="_blank" style="display:inline-block;margin-top:8px;background:#fff;color:#e53935;padding:10px 18px;border-radius:20px;font-weight:bold"><span class="zoom-pulse">🚐 Tam Kỳ ⇄ Đà Nẵng • Chỉ 100.000 VNĐ</span></a>
+    </div>
+
+  </div>
+</section>
+
+<section class="features">
+  <div class="container features-grid">
+    <div class="feature">
+      <h4>🚗 Xe đời mới</h4>
+      <p>Sạch sẽ, máy lạnh, thoải mái</p>
+    </div>
+    <div class="feature">
+      <h4>⏱ Đón nhanh</h4>
+      <p>Có mặt sau 5–10 phút</p>
+    </div>
+    <div class="feature">
+      <h4>💰 Giá minh bạch</h4>
+      <p>Không phụ phí bất ngờ</p>
+    </div>
+    <div class="feature">
+      <h4>☎ 24/7</h4>
+      <p>Luôn sẵn sàng phục vụ</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Taxi Tam Kỳ – Hotline: 0369 934 009<br>
+  <span style="font-size:12px;color:#aaa">📍 Địa chỉ: 70 Trương Định, phường Tam Kỳ, TP. Đà Nẵng</span><br>
+  <span style="font-size:12px;color:#aaa">✉ Gmail: vchinhit@gmail.com</span>
+</footer>
+
+<div class="bottom-bar">
+  <a class="call-btn" href="tel:0369934009">
+      <div style="line-height:1.1">
+        <div>📞 GỌI XE</div>
+        <div style="font-size:12px;opacity:.9">0369 934 009</div>
+      </div>
+    </a>
+  <a class="zalo-btn" href="https://zalo.me/0369934009" target="_blank" aria-label="Chat Zalo">
+    <svg class="zalo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.02 2 10.97c0 2.8 1.5 5.32 3.94 6.97-.17.63-.6 2.2-.7 2.55 0 0-.02.1.05.14.07.04.15 0 .15 0 .2-.03 2.32-1.52 3.04-2.03 1.01.28 2.08.43 3.2.43 5.52 0 10-4.02 10-8.97S17.52 2 12 2z"/>
+      <text x="12" y="15" text-anchor="middle" font-size="8" fill="#0a8d48" font-weight="bold">Zalo</text>
+    </svg>
+  </a>
+</div>
+
+<script>
+  function sendTelegram(e){
+    e.preventDefault();
+    const pickup = document.getElementById('pickup').value;
+    const dropoff = document.getElementById('dropoff').value;
+    const phone = document.getElementById('phone').value;
+    const car = document.getElementById('car').value;
+
+    const msg = `🚕 YÊU CẦU ĐẶT XE
+📍 Điểm đón: ${pickup}
+🏁 Điểm đến: ${dropoff}
+🚗 Loại xe: ${car}
+☎️ SĐT: ${phone}`;
+
+    const telegramUser = 'TaxiTamKy'; // 👉 đổi thành username Telegram của bạn
+    const telegramUrl = `https://t.me/${telegramUser}?text=${encodeURIComponent(msg)}`;
+    window.open(telegramUrl, '_blank');
+  }
+</script>
+</body>
+</html>
