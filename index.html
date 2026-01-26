@@ -78,8 +78,29 @@
     <div class="booking">
       <h3>ĐẶT XE NGAY</h3>
       <form onsubmit="sendTelegram(event)">
-        <input type="text" id="pickup" placeholder="Điểm đón" required />
-        <input type="text" id="dropoff" placeholder="Điểm đến" required />
+        <input type="text" id="pickup" list="pickup-list" placeholder="Điểm đón (gợi ý vị trí)" required />
+        <datalist id="pickup-list">
+          <option value="Tam Kỳ">
+          <option value="Ga Tam Kỳ">
+          <option value="Bến xe Tam Kỳ">
+          <option value="Sân bay Chu Lai">
+          <option value="Bệnh viện Đa khoa Quảng Nam">
+          <option value="Đà Nẵng">
+          <option value="Sân bay Đà Nẵng">
+        </datalist>
+        <input type="text" id="dropoff" list="dropoff-list" placeholder="Điểm đến (gợi ý vị trí)" required />
+        <datalist id="dropoff-list">
+          <option value="Tam Kỳ">
+          <option value="Ga Tam Kỳ">
+          <option value="Bến xe Tam Kỳ">
+          <option value="Sân bay Chu Lai">
+          <option value="Hà Lam">
+          <option value="Nam Phước">
+          <option value="Đại Lộc">
+          <option value="Hội An">
+          <option value="Đà Nẵng">
+          <option value="Sân bay Đà Nẵng">
+        </datalist>
         <input type="tel" id="phone" placeholder="Số điện thoại" required />
         <select id="car">
           <option>Taxi 4 chỗ</option>
