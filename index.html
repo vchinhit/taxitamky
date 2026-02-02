@@ -1,274 +1,953 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Đặt Xe Taxi Nhanh | Taxi Tam Kỳ</title>
-  <meta name="description" content="Dịch vụ taxi uy tín – đặt xe nhanh – giá rõ ràng – phục vụ 24/7" />
-  <style>
-    :root{
-      --primary:#e53935;
-      --dark:#222;
-      --gray:#666;
-      --bg:#f7f7f7;
+
+  <!-- Primary Meta Tags -->
+  <title>Taxi Tam Kỳ - Đặt Xe Nhanh 24/7 | Giá Rẻ, Uy Tín, An Toàn</title>
+  <meta name="title" content="Taxi Tam Kỳ - Đặt Xe Nhanh 24/7 | Giá Rẻ, Uy Tín, An Toàn" />
+  <meta name="description"
+    content="Dịch vụ taxi Tam Kỳ uy tín, đặt xe nhanh chóng 24/7. Giá cố định rõ ràng đi Đà Nẵng, Hội An, sân bay. Xe đời mới, lái xe chuyên nghiệp. Hotline: 0369 934 009" />
+  <meta name="keywords"
+    content="taxi tam kỳ, taxi quảng nam, đặt xe tam kỳ, taxi đà nẵng tam kỳ, taxi sân bay chu lai, taxi sân bay đà nẵng, taxi hội an, giá taxi tam kỳ, taxi 24/7" />
+  <meta name="author" content="Taxi Tam Kỳ" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Vietnamese" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="geo.region" content="VN-27" />
+  <meta name="geo.placename" content="Tam Kỳ, Quảng Nam" />
+  <meta name="geo.position" content="15.5738;108.4741" />
+  <meta name="ICBM" content="15.5738, 108.4741" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://taxitamky.vn/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://taxitamky.vn/" />
+  <meta property="og:title" content="Taxi Tam Kỳ - Đặt Xe Nhanh 24/7 | Giá Rẻ, Uy Tín, An Toàn" />
+  <meta property="og:description"
+    content="Dịch vụ taxi Tam Kỳ uy tín, đặt xe nhanh chóng 24/7. Giá cố định rõ ràng đi Đà Nẵng, Hội An, sân bay. Hotline: 0369 934 009" />
+  <meta property="og:image" content="https://taxitamky.vn/images/taxi-tam-ky-og.jpg" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:site_name" content="Taxi Tam Kỳ" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://taxitamky.vn/" />
+  <meta name="twitter:title" content="Taxi Tam Kỳ - Đặt Xe Nhanh 24/7 | Giá Rẻ, Uy Tín" />
+  <meta name="twitter:description"
+    content="Dịch vụ taxi Tam Kỳ uy tín, đặt xe nhanh chóng 24/7. Giá cố định rõ ràng. Hotline: 0369 934 009" />
+  <meta name="twitter:image" content="https://taxitamky.vn/images/taxi-tam-ky-twitter.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Structured Data - Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Taxi Tam Kỳ",
+    "image": "https://taxitamky.vn/images/logo.jpg",
+    "url": "https://taxitamky.vn",
+    "telephone": "+84369934009",
+    "priceRange": "200000-900000 VND",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "70 Trương Định",
+      "addressLocality": "Tam Kỳ",
+      "addressRegion": "Quảng Nam",
+      "postalCode": "560000",
+      "addressCountry": "VN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "15.5738",
+      "longitude": "108.4741"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://zalo.me/0369934009"
+    ],
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Tam Kỳ"
+      },
+      {
+        "@type": "City",
+        "name": "Đà Nẵng"
+      },
+      {
+        "@type": "City",
+        "name": "Hội An"
+      },
+      {
+        "@type": "City",
+        "name": "Chu Lai"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Dịch vụ taxi",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Taxi Tam Kỳ - Đà Nẵng",
+            "description": "Dịch vụ taxi từ Tam Kỳ đi Đà Nẵng"
+          },
+          "price": "700000",
+          "priceCurrency": "VND"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Taxi Sân bay Đà Nẵng",
+            "description": "Đưa đón sân bay Đà Nẵng"
+          },
+          "price": "400000",
+          "priceCurrency": "VND"
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial, Helvetica, sans-serif;background:#fff;color:#222}
-    a{text-decoration:none;color:inherit}
-    .container{padding:0 14px}
-    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-    .header-inner{display:flex;align-items:center;justify-content:center;height:56px}
-    nav{display:none}
-    .logo{font-weight:bold;font-size:16px;color:var(--primary)}
-    .hero{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?q=80&w=1200&auto=format&fit=crop') center/cover;color:#fff;padding:32px 0 20px}
-    .hero-grid{display:block}
-    .hero h1{font-size:24px;margin:0 0 10px;text-align:center;font-weight:800;line-height:1.3}
-50%{transform:scale(1.08)}}
-    .hero p{font-size:14px;opacity:.9;text-align:center;margin-bottom:14px}
-    .booking{background:linear-gradient(135deg,#ffffff,#fff5f5);color:#222;border-radius:16px;padding:18px;box-shadow:0 10px 30px rgba(229,57,53,.25);border:2px solid rgba(229,57,53,.15)}
-    .booking h3{text-align:center;color:var(--primary);margin-bottom:10px;letter-spacing:1px}
-    .booking input,.booking select,.booking button{width:100%;padding:14px;margin-bottom:10px;border-radius:8px;border:1px solid #ddd;font-size:15px}
-    .booking button{background:var(--primary);color:#fff;border:none;font-weight:bold;animation:pulse 1.8s infinite}
-    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(229,57,53,.6)}70%{box-shadow:0 0 0 12px rgba(229,57,53,0)}100%{box-shadow:0 0 0 0 rgba(229,57,53,0)}}
-    .price-box{margin-top:20px;background:#fff;border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,.08);padding:16px}
-    .price-box.price-ads{border:3px solid var(--primary);background:#fffdfd}
-    .price-box h4{text-align:center;color:var(--primary)}
-    .price-sub{position:relative;text-align:center;margin:6px 0 12px;font-size:14px;font-weight:700;color:#b71c1c;font-style:italic}
-    .price-sub:before,.price-sub:after{content:"";position:absolute;top:50%;width:18%;height:2px;background:linear-gradient(90deg,transparent,var(--primary));}
-    .price-sub:before{left:0}
-    .price-sub:after{right:0;transform:scaleX(-1)}
-    .price-table{width:100%;border-collapse:collapse;font-size:15px;font-weight:600}
-    .price-table th,.price-table td{border:1px solid #eee;padding:10px 6px;text-align:center}
-    .features{background:var(--bg);padding:30px 0}
-    footer{background:#111;color:#ccc;padding:18px 0 70px;text-align:center;font-size:13px}
-    .bottom-bar{position:fixed;left:0;right:0;bottom:0;display:flex;z-index:2000;font-weight:bold}
-    .bottom-bar a{flex:1;padding:14px 0;text-align:center;color:#fff;font-size:15px}
-    .call-btn{background:var(--primary)}
-    .zalo-btn{background:#0a8d48;display:flex;align-items:center;justify-content:center}
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #e53935;
+      --dark: #222;
+      --gray: #666;
+      --bg: #f7f7f7;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #222
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    .container {
+      padding: 0 14px
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .08)
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 56px
+    }
+
+    nav {
+      display: none
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 16px;
+      color: var(--primary)
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?q=80&w=1200&auto=format&fit=crop') center/cover;
+      color: #fff;
+      padding: 32px 0 20px
+    }
+
+    .hero-grid {
+      display: block
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      margin: 0 0 10px;
+      text-align: center;
+      font-weight: 800;
+      line-height: 1.3
+    }
+
+    @keyframes heroScale {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    .hero p {
+      font-size: 14px;
+      opacity: .9;
+      text-align: center;
+      margin-bottom: 14px
+    }
+
+    .booking {
+      background: linear-gradient(135deg, #ffffff, #fff5f5);
+      color: #222;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(229, 57, 53, .25);
+      border: 2px solid rgba(229, 57, 53, .15)
+    }
+
+    .booking h3 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 10px;
+      letter-spacing: 1px
+    }
+
+    .booking input,
+    .booking select,
+    .booking button {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 15px
+    }
+
+    .booking input[type="datetime-local"] {
+      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .booking input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      filter: invert(0.3);
+    }
+
+    .booking button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      animation: pulse 1.8s infinite
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(229, 57, 53, .6)
+      }
+
+      70% {
+        box-shadow: 0 0 0 12px rgba(229, 57, 53, 0)
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(229, 57, 53, 0)
+      }
+    }
+
+    .price-box {
+      margin-top: 20px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+      padding: 16px
+    }
+
+    .price-box.price-ads {
+      border: 3px solid var(--primary);
+      background: #fffdfd
+    }
+
+    .price-box h4 {
+      text-align: center;
+      color: var(--primary)
+    }
+
+    .price-sub {
+      position: relative;
+      text-align: center;
+      margin: 6px 0 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #b71c1c;
+      font-style: italic
+    }
+
+    .price-sub:before,
+    .price-sub:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 18%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary));
+    }
+
+    .price-sub:before {
+      left: 0
+    }
+
+    .price-sub:after {
+      right: 0;
+      transform: scaleX(-1)
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      font-weight: 600
+    }
+
+    .price-table th,
+    .price-table td {
+      border: 1px solid #eee;
+      padding: 10px 6px;
+      text-align: center
+    }
+
+    .features {
+      background: var(--bg);
+      padding: 30px 0
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 18px 0 70px;
+      text-align: center;
+      font-size: 13px
+    }
+
+    .bottom-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      z-index: 2000;
+      font-weight: bold
+    }
+
+    .bottom-bar a {
+      flex: 1;
+      padding: 14px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 15px
+    }
+
+    .call-btn {
+      background: var(--primary)
+    }
+
+    .zalo-btn {
+      background: #0a8d48;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
 
     /* RUNG LẮC 2S - NGHỈ */
-    .shake{animation:shake 2s infinite}
-    @keyframes shake{
-      0%{transform:translateX(0)}
-      10%{transform:translateX(-3px)}
-      20%{transform:translateX(3px)}
-      30%{transform:translateX(-3px)}
-      40%{transform:translateX(3px)}
-      100%{transform:translateX(0)}
+    .shake {
+      animation: shake 2s infinite
     }
 
-    
-    @media(min-width:768px){.container{max-width:1100px;margin:auto}}
+    @keyframes shake {
+      0% {
+        transform: translateX(0)
+      }
+
+      10% {
+        transform: translateX(-3px)
+      }
+
+      20% {
+        transform: translateX(3px)
+      }
+
+      30% {
+        transform: translateX(-3px)
+      }
+
+      40% {
+        transform: translateX(3px)
+      }
+
+      100% {
+        transform: translateX(0)
+      }
+    }
+
+
+    /* POPUP KHUYẾN MÃI */
+    .promo-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .promo-modal {
+      background: linear-gradient(135deg, #fff 0%, #fff5f5 100%);
+      border-radius: 20px;
+      max-width: 420px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(229, 57, 53, 0.4);
+      animation: slideDown 0.5s ease;
+      overflow: hidden;
+      border: 3px solid var(--primary);
+    }
+
+    .promo-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #fff;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+    }
+
+    .promo-close:hover {
+      transform: rotate(90deg);
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .promo-header {
+      background: linear-gradient(135deg, var(--primary), #ff7043);
+      color: #fff;
+      padding: 30px 20px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .promo-badge {
+      display: inline-block;
+      background: #ffd700;
+      color: #b71c1c;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 10px;
+      animation: bounce 2s infinite;
+    }
+
+    .promo-title {
+      font-size: 26px;
+      font-weight: 800;
+      margin: 10px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .promo-discount {
+      font-size: 48px;
+      font-weight: 900;
+      margin: 10px 0;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      line-height: 1;
+    }
+
+    .promo-body {
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    .promo-desc {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .promo-features {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .promo-features li {
+      list-style: none;
+      padding: 8px 0;
+      font-size: 14px;
+      color: #555;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .promo-features li:last-child {
+      border-bottom: none;
+    }
+
+    .promo-cta {
+      background: linear-gradient(135deg, var(--primary), #c62828);
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 30px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 6px 20px rgba(229, 57, 53, 0.4);
+      transition: all 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    .promo-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(229, 57, 53, 0.5);
+    }
+
+    .promo-timer {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #999;
+      font-style: italic;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1
+      }
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-5px)
+      }
+    }
+
+    @media(min-width:768px) {
+      .container {
+        max-width: 1100px;
+        margin: auto
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<header>
-  <div class="container header-inner">
-    <div class="logo">🚕 TAXI TAM KỲ<br><a href="tel:0369934009" style="font-size:12px;color:#666;font-weight:normal">Hotline: 0369 934 009</a></div>
-    <nav>
-      <a href="#">Trang chủ</a>
-      <a href="#">Bảng giá</a>
-      <a href="#">Dịch vụ</a>
-      <a href="#">Liên hệ</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>ĐẶT XE TAXI NHANH CHÓNG – AN TOÀN – GIÁ RÕ RÀNG</h1>
-      <p>Phục vụ 24/7 • Xe đời mới • Lái xe chuyên nghiệp</p>
-    </div>
-    <div class="booking">
-      <h3>ĐẶT XE NGAY</h3>
-      <form onsubmit="sendTelegram(event)">
-        <input type="text" id="pickup" list="pickup-list" placeholder="Điểm đón (gợi ý vị trí)" required />
-        <datalist id="pickup-list">
-          <option value="Tam Kỳ">
-          <option value="Ga Tam Kỳ">
-          <option value="Bến xe Tam Kỳ">
-          <option value="Sân bay Chu Lai">
-          <option value="Bệnh viện Đa khoa Quảng Nam">
-          <option value="Đà Nẵng">
-          <option value="Sân bay Đà Nẵng">
-        </datalist>
-        <input type="text" id="dropoff" list="dropoff-list" placeholder="Điểm đến (gợi ý vị trí)" required />
-        <datalist id="dropoff-list">
-          <option value="Tam Kỳ">
-          <option value="Ga Tam Kỳ">
-          <option value="Bến xe Tam Kỳ">
-          <option value="Sân bay Chu Lai">
-          <option value="Hà Lam">
-          <option value="Nam Phước">
-          <option value="Đại Lộc">
-          <option value="Hội An">
-          <option value="Đà Nẵng">
-          <option value="Sân bay Đà Nẵng">
-        </datalist>
-        <input type="tel" id="phone" placeholder="Số điện thoại" required />
-        <select id="car">
-          <option>Taxi 4 chỗ</option>
-          <option>Taxi 7 chỗ</option>
-        </select>
-        <button type="submit">GỬI YÊU CẦU ĐẶT XE</button>
-      </form>
+  <!-- POPUP KHUYẾN MÃI -->
+  <div class="promo-overlay" id="promoPopup">
+    <div class="promo-modal">
+      <button class="promo-close" onclick="closePromo()">✕</button>
+      <div class="promo-header">
+        <div class="promo-badge">🎉 KHUYẾN MÃI ĐẶC BIỆT</div>
+        <h2 class="promo-title">GIẢM GIÁ SỐC</h2>
+        <div class="promo-discount">20%</div>
+      </div>
+      <div class="promo-body">
+        <p class="promo-desc">
+          <strong>Đặt xe ngay hôm nay</strong> để nhận ưu đãi giảm giá <strong>20%</strong> cho chuyến đi đầu tiên!
+        </p>
+        <ul class="promo-features">
+          <li>✅ Giảm 20% cho khách hàng mới</li>
+          <li>✅ Áp dụng cho tất cả các tuyến</li>
+          <li>✅ Xe đời mới, lái xe chuyên nghiệp</li>
+          <li>✅ Phục vụ 24/7 - Đón nhanh chóng</li>
+        </ul>
+        <button class="promo-cta" onclick="scrollToBooking()">
+          🚕 ĐẶT XE NGAY - NHẬN ƯU ĐÃI
+        </button>
+        <p class="promo-timer">⏰ Ưu đãi có hiệu lực đến hết tháng 2/2026</p>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- BẢNG GIÁ RIÊNG -->
-<section class="features">
-  <div class="container">
-
-    <div class="price-box price-ads">
-      <h4>🚕 BẢNG GIÁ TAXI LIÊN XÃ, PHƯỜNG</h4>
-      <p class="price-sub">Giá trọn gói – Rõ ràng – Không phát sinh</p>
-      <table class="price-table">
-        <tr>
-          <th>Tuyến đường</th>
-          <th>🚗 4 chỗ</th>
-          <th>🚐 7 chỗ</th>
-        </tr>
-        <tr>
-          <td>Tam Kỳ ⇄ Hà Lam</td>
-          <td><strong>200.000đ</strong></td>
-          <td><strong>280.000đ</strong></td>
-        </tr>
-        <tr>
-          <td>Tam Kỳ ⇄ Nam Phước</td>
-          <td><strong>300.000đ</strong></td>
-          <td><strong>400.000đ</strong></td>
-        </tr>
-        <tr>
-          <td>Tam Kỳ ⇄ Đại Lộc</td>
-          <td><strong>500.000đ</strong></td>
-          <td><strong>650.000đ</strong></td>
-        </tr>
-        <tr>
-          <td>Tam Kỳ ⇄ Chu Lai</td>
-          <td><strong>250.000đ</strong></td>
-          <td><strong>350.000đ</strong></td>
-        </tr>
-        <tr class="highlight-row">
-          <td>🔥 Tam Kỳ ⇄ Đà Nẵng</td>
-          <td><strong>700.000đ</strong></td>
-          <td><strong>900.000đ</strong></td>
-        </tr>
-      </table>
-      
+  <header>
+    <div class="container header-inner">
+      <div class="logo">🚕 TAXI TAM KỲ<br><a href="tel:0369934009"
+          style="font-size:12px;color:#666;font-weight:normal">Hotline: 0369 934 009</a></div>
+      <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Bảng giá</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="price-box price-ads">
-      <h4>✈️ BẢNG GIÁ TAXI SÂN BAY</h4>
-      <p class="price-sub">Giá trọn gói – Đón đúng giờ – Hỗ trợ hành lý</p>
-      <table class="price-table">
-        <tr>
-          <th>Tuyến sân bay</th>
-          <th>🚗 4 chỗ</th>
-          <th>🚐 7 chỗ</th>
-        </tr>
-        <tr>
-          <td>Tam Kỳ ⇄ Sân bay Chu Lai</td>
-          <td><strong>300.000đ</strong></td>
-          <td><strong>350.000đ</strong></td>
-        </tr>
-        <tr class="highlight-row">
-          <td>🔥 Tam Kỳ ⇄ Sân bay Đà Nẵng</td>
-          <td><strong>400.000đ</strong></td>
-          <td><strong>600.000đ</strong></td>
-        </tr>
-      </table>
-      
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>ĐẶT XE TAXI NHANH CHÓNG – AN TOÀN – GIÁ RÕ RÀNG</h1>
+        <p>Phục vụ 24/7 • Xe đời mới • Lái xe chuyên nghiệp</p>
+      </div>
+      <div class="booking">
+        <h3>ĐẶT XE NGAY</h3>
+        <form onsubmit="sendTelegram(event)" aria-label="Form đặt xe taxi">
+          <input type="text" id="pickup" list="pickup-list" placeholder="Điểm đón (gợi ý vị trí)" required
+            aria-label="Nhập điểm đón" />
+          <datalist id="pickup-list">
+            <option value="Tam Kỳ">
+            <option value="Ga Tam Kỳ">
+            <option value="Bến xe Tam Kỳ">
+            <option value="Sân bay Chu Lai">
+            <option value="Bệnh viện Đa khoa Quảng Nam">
+            <option value="Đà Nẵng">
+            <option value="Sân bay Đà Nẵng">
+          </datalist>
+          <input type="text" id="dropoff" list="dropoff-list" placeholder="Điểm đến (gợi ý vị trí)" required
+            aria-label="Nhập điểm đến" />
+          <datalist id="dropoff-list">
+            <option value="Tam Kỳ">
+            <option value="Ga Tam Kỳ">
+            <option value="Bến xe Tam Kỳ">
+            <option value="Sân bay Chu Lai">
+            <option value="Hà Lam">
+            <option value="Nam Phước">
+            <option value="Đại Lộc">
+            <option value="Hội An">
+            <option value="Đà Nẵng">
+            <option value="Sân bay Đà Nẵng">
+          </datalist>
+          <input type="tel" id="phone" placeholder="Số điện thoại" required aria-label="Nhập số điện thoại" />
+          <label for="datetime" style="font-size:13px;color:#666;margin-bottom:5px;display:block">📅 Thời gian đón (tùy
+            chọn - để trống nếu đặt ngay):</label>
+          <input type="datetime-local" id="datetime" aria-label="Chọn ngày giờ đặt xe"
+            style="color:#222;margin-top:0" />
+          <select id="car" aria-label="Chọn loại xe">
+            <option>Taxi 4 chỗ</option>
+            <option>Taxi 7 chỗ</option>
+          </select>
+          <button type="submit" aria-label="Gửi yêu cầu đặt xe taxi">GỬI YÊU CẦU ĐẶT XE</button>
+        </form>
+      </div>
     </div>
+  </section>
 
-    
+  <!-- BẢNG GIÁ RIÊNG -->
+  <section class="features">
+    <div class="container">
 
-    <div class="price-box" style="background:linear-gradient(135deg,#e53935,#ff7043);color:#fff;text-align:center">
-      <h4 style="color:#fff">🚐 XE GHÉP – XE TIỆN CHUYẾN GIÁ TIẾT KIỆM</h4>
-      <p style="font-size:14px;margin:8px 0">Chạy hằng ngày • Giá rẻ hơn taxi riêng • Phù hợp đi sân bay – liên xã</p>
-      <a href="https://zalo.me/0369934009" target="_blank" style="display:inline-block;margin-top:8px;background:#fff;color:#e53935;padding:10px 18px;border-radius:20px;font-weight:bold"><span class="zoom-pulse">🚐 Tam Kỳ ⇄ Đà Nẵng • Chỉ 100.000 VNĐ</span></a>
+      <div class="price-box price-ads">
+        <h4>🚕 BẢNG GIÁ TAXI LIÊN XÃ, PHƯỜNG</h4>
+        <p class="price-sub">Giá trọn gói – Rõ ràng – Không phát sinh</p>
+        <table class="price-table">
+          <tr>
+            <th>Tuyến đường</th>
+            <th>🚗 4 chỗ</th>
+            <th>🚐 7 chỗ</th>
+          </tr>
+          <tr>
+            <td>Tam Kỳ ⇄ Hà Lam</td>
+            <td><strong>200.000đ</strong></td>
+            <td><strong>280.000đ</strong></td>
+          </tr>
+          <tr>
+            <td>Tam Kỳ ⇄ Nam Phước</td>
+            <td><strong>300.000đ</strong></td>
+            <td><strong>400.000đ</strong></td>
+          </tr>
+          <tr>
+            <td>Tam Kỳ ⇄ Đại Lộc</td>
+            <td><strong>500.000đ</strong></td>
+            <td><strong>650.000đ</strong></td>
+          </tr>
+          <tr>
+            <td>Tam Kỳ ⇄ Chu Lai</td>
+            <td><strong>250.000đ</strong></td>
+            <td><strong>350.000đ</strong></td>
+          </tr>
+          <tr class="highlight-row">
+            <td>🔥 Tam Kỳ ⇄ Đà Nẵng</td>
+            <td><strong>700.000đ</strong></td>
+            <td><strong>900.000đ</strong></td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="price-box price-ads">
+        <h4>✈️ BẢNG GIÁ TAXI SÂN BAY</h4>
+        <p class="price-sub">Giá trọn gói – Đón đúng giờ – Hỗ trợ hành lý</p>
+        <table class="price-table">
+          <tr>
+            <th>Tuyến sân bay</th>
+            <th>🚗 4 chỗ</th>
+            <th>🚐 7 chỗ</th>
+          </tr>
+          <tr>
+            <td>Tam Kỳ ⇄ Sân bay Chu Lai</td>
+            <td><strong>300.000đ</strong></td>
+            <td><strong>350.000đ</strong></td>
+          </tr>
+          <tr class="highlight-row">
+            <td>🔥 Tam Kỳ ⇄ Sân bay Đà Nẵng</td>
+            <td><strong>400.000đ</strong></td>
+            <td><strong>600.000đ</strong></td>
+          </tr>
+        </table>
+
+      </div>
+
+
+
+      <div class="price-box" style="background:linear-gradient(135deg,#e53935,#ff7043);color:#fff;text-align:center">
+        <h4 style="color:#fff">🚐 XE GHÉP – XE TIỆN CHUYẾN GIÁ TIẾT KIỆM</h4>
+        <p style="font-size:14px;margin:8px 0">Chạy hằng ngày • Giá rẻ hơn taxi riêng • Phù hợp đi sân bay – liên xã</p>
+        <a href="https://zalo.me/0369934009" target="_blank"
+          style="display:inline-block;margin-top:8px;background:#fff;color:#e53935;padding:10px 18px;border-radius:20px;font-weight:bold"><span
+            class="zoom-pulse">🚐 Tam Kỳ ⇄ Đà Nẵng • Chỉ 100.000 VNĐ</span></a>
+      </div>
+
     </div>
+  </section>
 
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature">
+        <h4>🚗 Xe đời mới</h4>
+        <p>Sạch sẽ, máy lạnh, thoải mái</p>
+      </div>
+      <div class="feature">
+        <h4>⏱ Đón nhanh</h4>
+        <p>Có mặt sau 5–10 phút</p>
+      </div>
+      <div class="feature">
+        <h4>💰 Giá minh bạch</h4>
+        <p>Không phụ phí bất ngờ</p>
+      </div>
+      <div class="feature">
+        <h4>☎ 24/7</h4>
+        <p>Luôn sẵn sàng phục vụ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content Section -->
+  <section class="features" style="padding-top:10px">
+    <div class="container">
+      <article
+        style="background:#fff;padding:25px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);line-height:1.8">
+        <h2 style="color:var(--primary);font-size:22px;margin-bottom:15px;text-align:center">
+          Dịch Vụ Taxi Tam Kỳ Uy Tín - Chuyên Nghiệp - Giá Rẻ
+        </h2>
+        <p style="margin-bottom:15px;color:#444;font-size:15px">
+          <strong>Taxi Tam Kỳ</strong> là dịch vụ taxi hàng đầu tại Quảng Nam, chuyên cung cấp dịch vụ đưa đón khách
+          hàng 24/7 với đội ngũ lái xe chuyên nghiệp, xe đời mới và giá cả cạnh tranh. Chúng tôi phục vụ các tuyến đường
+          phổ biến như <strong>taxi Tam Kỳ Đà Nẵng</strong>, <strong>taxi sân bay Chu Lai</strong>, <strong>taxi sân bay
+            Đà Nẵng</strong>, và các tuyến liên xã, liên huyện trong khu vực.
+        </p>
+
+        <h3 style="color:var(--primary);font-size:18px;margin:20px 0 10px">
+          Tại Sao Chọn Taxi Tam Kỳ?
+        </h3>
+        <ul style="margin-bottom:15px;padding-left:20px;color:#444">
+          <li style="margin-bottom:8px"><strong>Giá cố định rõ ràng:</strong> Bảng giá minh bạch, không phát sinh chi
+            phí ẩn</li>
+          <li style="margin-bottom:8px"><strong>Đặt xe nhanh chóng:</strong> Xe có mặt sau 5-10 phút kể từ khi gọi</li>
+          <li style="margin-bottom:8px"><strong>Phục vụ 24/7:</strong> Sẵn sàng phục vụ mọi lúc, kể cả ngày lễ, Tết</li>
+          <li style="margin-bottom:8px"><strong>Xe đời mới:</strong> Đầy đủ tiện nghi, máy lạnh, sạch sẽ</li>
+          <li style="margin-bottom:8px"><strong>Lái xe chuyên nghiệp:</strong> Nhiều năm kinh nghiệm, lịch sự, an toàn
+          </li>
+        </ul>
+
+        <h3 style="color:var(--primary);font-size:18px;margin:20px 0 10px">
+          Các Tuyến Đường Phổ Biến
+        </h3>
+        <p style="margin-bottom:10px;color:#444">
+          🚕 <strong>Taxi Tam Kỳ - Đà Nẵng:</strong> Tuyến đường được ưa chuộng nhất với giá chỉ từ 700.000đ cho xe 4
+          chỗ<br>
+          ✈️ <strong>Taxi đưa đón sân bay Đà Nẵng:</strong> Dịch vụ đưa đón sân bay chuyên nghiệp, đúng giờ<br>
+          🏖️ <strong>Taxi Tam Kỳ - Hội An:</strong> Phục vụ du khách tham quan phố cổ Hội An<br>
+          🚐 <strong>Xe ghép Tam Kỳ - Đà Nẵng:</strong> Giá tiết kiệm chỉ 100.000đ/người
+        </p>
+
+        <p style="margin-top:20px;text-align:center;font-size:16px">
+          <strong style="color:var(--primary)">Hotline đặt xe: <a href="tel:0369934009"
+              style="color:var(--primary)">0369 934 009</a></strong>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Taxi Tam Kỳ – Hotline: 0369 934 009<br>
+    <span style="font-size:12px;color:#aaa">📍 Địa chỉ: 70 Trương Định, phường Tam Kỳ, TP. Đà Nẵng</span><br>
+    <span style="font-size:12px;color:#aaa">✉ Gmail: vchinhit@gmail.com</span>
+  </footer>
+
+  <div class="bottom-bar">
+    <a class="call-btn shake" href="tel:0369934009" aria-label="Gọi điện đặt xe taxi ngay"
+      title="Gọi ngay: 0369 934 009">📞 GỌI XE NGAY</a>
+    <a class="zalo-btn shake" href="https://zalo.me/0369934009" target="_blank" rel="noopener"
+      aria-label="Liên hệ qua Zalo" title="Chat Zalo với Taxi Tam Kỳ">ZALO</a>
   </div>
-</section>
 
-<section class="features">
-  <div class="container features-grid">
-    <div class="feature">
-      <h4>🚗 Xe đời mới</h4>
-      <p>Sạch sẽ, máy lạnh, thoải mái</p>
-    </div>
-    <div class="feature">
-      <h4>⏱ Đón nhanh</h4>
-      <p>Có mặt sau 5–10 phút</p>
-    </div>
-    <div class="feature">
-      <h4>💰 Giá minh bạch</h4>
-      <p>Không phụ phí bất ngờ</p>
-    </div>
-    <div class="feature">
-      <h4>☎ 24/7</h4>
-      <p>Luôn sẵn sàng phục vụ</p>
-    </div>
-  </div>
-</section>
+  <script>
+    // TELEGRAM BOT (TỰ ĐỘNG – CẤU TRÚC CHUẨN)
+    function sendTelegram(e) {
+      e.preventDefault();
 
-<footer>
-  © 2026 Taxi Tam Kỳ – Hotline: 0369 934 009<br>
-  <span style="font-size:12px;color:#aaa">📍 Địa chỉ: 70 Trương Định, phường Tam Kỳ, TP. Đà Nẵng</span><br>
-  <span style="font-size:12px;color:#aaa">✉ Gmail: vchinhit@gmail.com</span>
-</footer>
+      const pickup = document.getElementById('pickup').value.trim();
+      const dropoff = document.getElementById('dropoff').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const car = document.getElementById('car').value;
+      const datetime = document.getElementById('datetime').value;
 
-<div class="bottom-bar">
-  <a class="call-btn shake" href="tel:0369934009">📞 GỌI XE NGAY</a>
-  <a class="zalo-btn shake" href="https://zalo.me/0369934009" target="_blank">ZALO</a>
-</div>
+      if (!pickup || !dropoff || !phone) {
+        alert('❌ Vui lòng nhập đầy đủ thông tin');
+        return;
+      }
 
-<script>
-// TELEGRAM BOT (TỰ ĐỘNG – CẤU TRÚC CHUẨN)
-function sendTelegram(e){
-  e.preventDefault();
+      // Format datetime if provided
+      let datetimeText = '';
+      if (datetime) {
+        const dt = new Date(datetime);
+        const options = {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false
+        };
+        datetimeText = `\n🕐 Thời gian: ${dt.toLocaleString('vi-VN', options)}`;
+      } else {
+        datetimeText = '\n🕐 Thời gian: Đặt xe ngay';
+      }
 
-  const pickup  = document.getElementById('pickup').value.trim();
-  const dropoff = document.getElementById('dropoff').value.trim();
-  const phone   = document.getElementById('phone').value.trim();
-  const car     = document.getElementById('car').value;
-
-  if(!pickup || !dropoff || !phone){
-    alert('❌ Vui lòng nhập đầy đủ thông tin');
-    return;
-  }
-
-  const text = `🚕 ĐẶT XE MỚI
+      const text = `🚕 ĐẶT XE MỚI
 📍 Đón: ${pickup}
 🏁 Đến: ${dropoff}
-🚗 Xe: ${car}
+🚗 Xe: ${car}${datetimeText}
 ☎️ ${phone}`;
 
-  fetch('https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUYo/sendMessage',{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({
-      chat_id:6024711670,
-      text:text
-    })
-  })
-  .then(res => res.json())
-  .then(data => {
-    if(data.ok){
-      alert('✅ Đã gửi yêu cầu thành công!');
-      document.querySelector('form').reset();
-    }else{
-      alert('❌ Telegram lỗi: ' + data.description);
+      fetch('https://api.telegram.org/bot8426099321:AAFgLsSt66sFz0t3sSl5f5wzKZk4af0YUYo/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: 6024711670,
+          text: text
+        })
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.ok) {
+            alert('✅ Đã gửi yêu cầu thành công!');
+            document.querySelector('form').reset();
+          } else {
+            alert('❌ Telegram lỗi: ' + data.description);
+          }
+        })
+        .catch(err => {
+          alert('❌ Không kết nối được Telegram');
+          console.error(err);
+        });
     }
-  })
-  .catch(err => {
-    alert('❌ Không kết nối được Telegram');
-    console.error(err);
-  });
-}
-</script>
+
+    // POPUP CONTROL FUNCTIONS
+    function closePromo() {
+      document.getElementById('promoPopup').style.display = 'none';
+    }
+
+    function scrollToBooking() {
+      closePromo();
+      // Scroll to booking form
+      document.querySelector('.booking').scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+
+    // Show popup after 1 second
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.getElementById('promoPopup').style.display = 'flex';
+      }, 1000);
+    });
+
+    // Close popup when clicking outside the modal
+    document.addEventListener('click', function (e) {
+      const popup = document.getElementById('promoPopup');
+      if (e.target === popup) {
+        closePromo();
+      }
+    });
+  </script>
 </body>
+
 </html>
